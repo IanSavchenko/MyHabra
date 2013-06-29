@@ -1,0 +1,21 @@
+﻿<Window x:Class="UacApp.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Hello, Habr!" Height="350" Width="525">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"  />
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Grid x:Name="RestartPanel" HorizontalAlignment="Stretch" Background="CadetBlue" >
+            <Label Margin="5" VerticalAlignment="Center">Application is running in read-only mode.</Label>
+            <Button Grid.Row="0" x:Name="RestartButton" Click="RestartButton_Click" HorizontalAlignment="Right" Margin="5">
+                <StackPanel Orientation="Horizontal">
+                    <Image x:Name="RestartButtonIcon" />
+                    <Label Margin="0">Restart app as admin</Label>
+                </StackPanel> 
+            </Button>
+        </Grid>
+        <Button Grid.Row="1" x:Name="ActionButton" Margin="5" Click="ActionButton_Click" Height="30" Width="200">Perform admin action</Button>
+    </Grid>
+</Window>
